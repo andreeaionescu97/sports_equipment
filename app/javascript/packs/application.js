@@ -33,80 +33,8 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
 });
 
-// Homepage 4 boxes/categories JS
+// Homepage main banner JS
 
-var clickHandler = ('ontouchstart' in document.documentElement ? "touchend" : "click");
 
-$(function(){
 
-  var prevSelect = '';
-
-  $('.small-box .original').click(function () {
-    if($('#boxes').attr("class")) {
-      endFlip();
-    } else {
-      flipTo($(this));
-    }
-  });
-
-  $(document).on(clickHandler, function (e) {
-    var boxes = $("#boxes");
-
-    if(!boxes.is(e.target) && boxes.has(e.target).length === 0) {
-      endFlip();
-    }
-  });
-
-  /*$('.small-box .original').hoverIntent(function () {
-        flipTo($(this));
-    }, function () {});
-
-    $('#banner .container').mouseleave(function () {
-        //$('#banner #boxes').attr("class", prevSelect + "-previous");
-        $('#banner #boxes').attr("class", "");
-    });*/
-
-  function flipTo($this) {
-    var value = $this.parents('.small-box').attr('rel');
-    $('.small-box').parent().attr("class", "").addClass(value + "-chosen");
-    prevSelect = value;
-  }
-
-  function startFlip() {
-    if(prevSelect == '' || prevSelect == 'beaches') {
-      flipTo($('.mountains .mountains-visible'));
-    } else if(prevSelect == 'mountains') {
-      flipTo($('.lakes .lakes-visible'));
-    } else if(prevSelect == 'lakes') {
-      flipTo($('.forests .forests-visible'));
-    } else if(prevSelect == 'forests') {
-      flipTo($('.beaches .beaches-visible'));
-    }
-  }
-
-  function endFlip() {
-    $('#banner #boxes').attr("class", "");
-  }
-
-  /* Autorun */
-  /*var interval = 7000,
-      intervalDelay = interval - 1000,
-      start = setInterval(startFlip, interval),
-      end = setInterval(),
-      endStagger = setTimeout(function(){
-        end = setInterval(endFlip, interval);
-      }, intervalDelay);
-
-  $('#boxes').hover(function(e){
-    clearInterval(start);
-    clearInterval(end);
-    clearTimeout(endStagger);
-  }, function(e){
-    start = setInterval(startFlip, interval);
-
-    endStagger = setTimeout(function(){
-      end = setInterval(endFlip, interval);
-    }, intervalDelay);
-  });*/
-
-});
+particlesJS("particles-js", {"particles":{"number":{"value":14,"density":{"enable":true,"value_area":394.57459926017265}},"color":{"value":"#05F4B7"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.18939580764488287,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":6.6,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":299.8766954377312,"color":"#ffffff","opacity":0.2130702836004932,"width":0.5},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;s
