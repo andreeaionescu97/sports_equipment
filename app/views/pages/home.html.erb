@@ -1,12 +1,40 @@
 
 <!-- particles.js container -->
 <div id="particles-js">
-  <p class="homepage-banner-header">RIDERS</p>
+  <p class="homepage-banner-header">RIDERS OF THE PAST</p>
   <p class="homepage-banner-subheader"><span style="color: #05F4B7">buy</span> or <span style="color: #371BB1">sell</span> sport's equipment</p>
   <form class="form-inline homepage-banner-form">
     <input class="form-control mr-sm-2" type="search" placeholder="type..." aria-label="Search">
     <button class="btn btn-outline-success my-2 my-sm-0 btn-search" type="submit">Search</button>
   </form>
 </div>
+
+<!-- main categories banner -->
+<div class="main-categories-banner">
+  <p class="homepage-title">WHAT WE OFFER.</p>
+  <div class="display-flex">
+    <div class="main-category">
+      <%= image_tag "bike.svg", class: "svg-main-category"%>
+      <p> BIKES</p>
+    </div>
+     <div class="main-category">
+      <%= image_tag "skateboarder.svg", class: "svg-main-category"%>
+      <p> SKATEBOARDS</p>
+    </div>
+     <div class="main-category">
+      <%= image_tag "roller-skate.svg", class: "svg-main-category"%>
+      <p> ROLLERBLADES</p>
+    </div>
+     <div class="main-category">
+      <%= image_tag "ski.svg", class: "svg-main-category"%>
+      <p> SKIS</p>
+     </div>
+     <div class="main-category">
+      <%= image_tag "snowboard.svg", class: "svg-main-category"%>
+      <p> SNOWBOARDS</p>
+     </div>
+ </div>
+</div>
+s
 <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>

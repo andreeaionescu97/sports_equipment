@@ -22,6 +22,7 @@ body{ margin:0;}
   font-family: Orbitron;
   font-weight: 300;
   text-transform: uppercase;
+  margin-top: 50px;
 }
 
 .homepage-banner-subheader {
@@ -52,5 +53,35 @@ body{ margin:0;}
   border-radius: 30px;
 }
 
+.main-categories-banner {
+  margin-top:600px;
+  margin-left: 250px;
+  margin-right: 250px;
+}
 
+.display-flex {
+  display: flex;
+  justify-content: space-between;
+}
 
+.svg-main-category {
+  height: 100px;
+}
+
+.main-category p {
+  color: #05F4B7;
+  padding-top: 20px;
+}
+
+.main-category {
+  text-align: center;
+}
+
+.homepage-title {
+  text-align: center;
+  color: #12151F;
+  font-family: Orbitron;
+  font-weight: 300;
+  font-size: 25px;
+  margin-bottom: 80px;
+}

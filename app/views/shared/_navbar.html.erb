@@ -26,6 +26,15 @@
           </div>
         </li>
       <% else %>
+         <li class="nav-item">
+          <%= link_to "Browse", "#", class: "nav-link" %>
+        </li> <li class="nav-item">
+          <%= link_to "Who we are", "#", class: "nav-link" %>
+        </li> <li class="nav-item">
+          <%= link_to "Help", "#", class: "nav-link" %>
+        </li> <li class="nav-item">
+          <%= link_to "Sell", "#", class: "nav-link nav-link-sell" %>
+        </li>
         <li class="nav-item">
           <%= link_to "Login", new_user_session_path, class: "nav-link" %>
         </li>
